@@ -1,9 +1,20 @@
 const input = document.getElementById("input");
+const delBtn = document.getElementById("del");
 const result = document.getElementById("result");
 const clear = document.getElementById("clear");
 const number = document.getElementById("number");
 const equal = document.getElementById("equal");
 const multiply = document.getElementById("multiply");
+
+
+const delClick = () => {
+  delBtn.addEventListener('click', () => {
+    const currentText = input.textContent
+    input.textContent = currentText.slice(0, -1)
+  })
+}
+
+delClick()
 
 // Number buttons
 const numberClick = () => {
